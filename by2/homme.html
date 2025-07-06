@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteConnect | Smart Digital Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/logoicon.jpg" type="image/x-icon" sizes="16x16">
+    <meta name="author" content="ByteConnect">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a192f;
+            --electric-blue: #64ffda;
+            --dark-pink: #ff6b6b;
+            --mint-green: #88d8b0;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+        background: linear-gradient(to right, #0844cc, #dc14ac);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-overlay {
+            background: rgba(10, 25, 47, 0.9);
+            transition: opacity 0.3s ease;
+        }
+        
+        .testimonial-slide {
+            transition: transform 0.5s ease;
+        }
+        
+        .whatsapp-float {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+        animation: marquee 7s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav id="navbar" class="bg-transparent fixed w-full z-50 transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+        <div class="flex-shrink-0 flex items-center">
+            <span class="text-2xl font-bold text-indigo-900">
+            <img src="images/logoByteconnectofficielfichiersvgavecslogan.png" alt="logo">
+            </span>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+            <!-- Styled Link Items -->
+            <a href="#home" class="relative group text-indigo-900 font-medium px-3 py-2 transition-colors duration-300">
+                Accueil
+                <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#about" class="relative group text-gray-700 font-medium px-3 py-2 transition-colors duration-300">
+                À propos de nous
+                <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#services" class="relative group text-gray-700 font-medium px-3 py-2 transition-colors duration-300">
+                Services
+                <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#why" class="relative group text-gray-700 font-medium px-3 py-2 transition-colors duration-300">
+                Pourquoi nous ?
+                <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#contact" class="relative group text-gray-700 font-medium px-3 py-2 transition-colors duration-300">
+                Contact
+                <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <!-- Fancy Button from Uiverse -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=recrutement@byteconnect.ma&su=%20&body=Bonjour%2C%20j'aimerais%20..." target="_blank" >
+                <button class="cursor-pointer group relative bg-white hover:bg-zinc-300 text-black font-semibold text-sm px-6 py-3 rounded-full transition-all duration-200 ease-in-out shadow hover:shadow-lg w-40 h-12">
+                    <div class="relative flex items-center justify-center gap-2">
+                    <span class="relative inline-block overflow-hidden">
+                        <span class="block transition-transform duration-300 group-hover:-translate-y-full">Rejoindre</span>
+                        <span class="absolute inset-0 transition-transform duration-300 translate-y-full group-hover:translate-y-0">Maintenant</span>
+                    </span>
+                    <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-45" viewBox="0 0 24 24">
+                        <circle fill="currentColor" r="11" cy="12" cx="12"></circle>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="white"
+                            d="M7.5 16.5L16.5 7.5M16.5 7.5H10.5M16.5 7.5V13.5"></path>
+                    </svg>
+                    </div>
+                </button>
+            </a>
+
+
+            </div>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-gray-700 hover:text-indigo-600 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            </button>
+        </div>
+        </div>
+
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-indigo-900 hover:bg-indigo-50 rounded-md">Accueil</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-indigo-50 rounded-md">À propos de nous</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-indigo-50 rounded-md">Services</a>
+                <a href="#why" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-indigo-50 rounded-md">Pourquoi nous ?</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-indigo-50 rounded-md">Contact</a>
+                <!-- Fancy Button from Uiverse -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=recrutement@byteconnect.ma&su=%20&body=Bonjour%2C%20j'aimerais%20..." target="_blank">
+                    <button class="cursor-pointer group relative bg-white hover:bg-zinc-300 text-black font-semibold text-sm px-6 py-3 rounded-full transition-all duration-200 ease-in-out shadow hover:shadow-lg w-40 h-12">
+                        <div class="relative flex items-center justify-center gap-2">
+                        <span class="relative inline-block overflow-hidden">
+                            <span class="block transition-transform duration-300 group-hover:-translate-y-full">Rejoindre</span>
+                            <span class="absolute inset-0 transition-transform duration-300 translate-y-full group-hover:translate-y-0">Maintenant</span>
+                        </span>
+                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-45" viewBox="0 0 24 24">
+                            <circle fill="currentColor" r="11" cy="12" cx="12"></circle>
+                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="white"
+                                d="M7.5 16.5L16.5 7.5M16.5 7.5H10.5M16.5 7.5V13.5"></path>
+                        </svg>
+                        </div>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Hero Section -->
+<section class="bg-[#f4f5f4] px-6 pt-24 md:pt-24 pb-0" id="home">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+    
+    <!-- Text Section -->
+    <div class="w-full md:w-1/2">
+      <p class="text-[#0844cc] italic mb-2">Bienvenue chez Byteconnect</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        Boostez votre performance avec <span class="text-[#0844cc]">ByteConnect</span>
+      </h1>
+      <p class="text-[#444444] mb-6 leading-relaxed">
+        Entrez dans l'avenir en toute confiance avec ByteConnect. Nous aidons votre entreprise à se démarquer et à progresser en vous proposant des solutions numériques adaptées à vos besoins spécifiques, à chaque étape.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=recrutement@byteconnect.ma&su=%20&body=Bonjour%2C%20j'aimerais%20..." target="_blank" 
+        class="inline-block bg-[#0844cc] text-white px-6 py-3 rounded-full font-medium shadow hover:bg-[#0633a1] transition duration-200 ease-in-out">
+        Démarrer 🚀
+        </a>
+        <a href="#contact" class="bg-white border-2 border-[#0844cc] text-[#0844cc] px-6 py-3 rounded-full font-medium hover:bg-[#0844cc] hover:text-white transition">
+          Contactez-nous 📞
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="w-full md:w-1/2 flex flex-col items-center">
+      <div class="relative flex justify-center">
+        <div class="absolute w-64 h-64 bg-[#dc14ac] rounded-full z-0 md:w-72 md:h-72"></div>
+        <img src="images/banner-image.png" alt="Agent" class="relative z-10 w-72 md:w-80" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Our Partners Section -->
+<section class="py-4 bg-gradient-to-r from-[#dc14ac] via-[#0844cc] to-[#dc14ac]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="overflow-hidden relative w-full">
+      <div class="flex gap-12 animate-marquee">
+        <!-- Partner Logos -->
+        <img src="images/logo1.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 1">
+        <img src="images/logo2.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 2">
+        <img src="images/logo3.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 3">
+        <img src="images/logo4.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 4">
+        <!-- Duplicates for smooth looping -->
+        <img src="images/logo1.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 1">
+        <img src="images/logo2.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 2">
+        <img src="images/logo3.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 3">
+        <img src="images/logo4.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 4">
+        <!-- Partner Logos -->
+        <img src="images/logo1.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 1">
+        <img src="images/logo2.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 2">
+        <img src="images/logo3.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 3">
+        <img src="images/logo4.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 4">
+        <!-- Duplicates for smooth looping -->
+        <img src="images/logo1.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 1">
+        <img src="images/logo2.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 2">
+        <img src="images/logo3.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 3">
+        <img src="images/logo4.png" class="h-16 w-auto object-contain filter grayscale-0 brightness-0 invert hover:grayscale-0 hover:invert-0 transition" alt="Logo 4">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">À propos de <span class="gradient-text">ByteConnect</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Nous ne sommes pas une simple entreprise technologique. Nous sommes votre partenaire de transformation numérique.
+                </p>
+            </div>
+            
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <img src="images/about.png" 
+                         alt="Team working" 
+                         class="rounded-xl shadow-lg w-full h-auto object-cover"
+                         loading="lazy">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-indigo-900 mb-6">Notre vision</h3>
+                    <p class="text-gray-600 mb-6">
+                     Fondée en 2024, ByteConnect s'est rapidement développée pour devenir un fournisseur de solutions numériques de premier plan au Maroc. 
+                     Notre mission est de fournir aux entreprises des technologies qui stimulent la croissance, l'efficacité et l'innovation.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                       Nous croyons en l’établissement de relations à long terme avec nos clients en offrant une valeur exceptionnelle grâce à des solutions numériques personnalisées qui répondent à de véritables défis commerciaux.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-lightbulb text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Innovation</h4>
+                                <p class="text-gray-600 text-sm">Des solutions de pointe adaptées à vos besoins</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-handshake text-pink-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Intégrité</h4>
+                                <p class="text-gray-600 text-sm">Pratiques commerciales transparentes et éthiques</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-bullseye text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Excellence</h4>
+                                <p class="text-gray-600 text-sm">Engagement envers la qualité dans tout ce que nous faisons</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-users text-indigo-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Collaboration</h4>
+                                <p class="text-gray-600 text-sm">Travailler ensemble pour atteindre vos objectifs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-block bg-indigo-900 hover:bg-indigo-800 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                        En savoir plus sur nous
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Nos <span class="gradient-text">Services</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Des solutions numériques complètes pour aider votre entreprise à croître et à prospérer sur le marché moderne.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-b-4 hover:border-blue-500">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Web Development</h3>
+                    <p class="text-gray-600 mb-6">
+                        Sites Web et applications Web personnalisés créés avec des technologies modernes pour offrir des expériences utilisateur exceptionnelles.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span class="text-gray-600">Responsive Design</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span class="text-gray-600">E-commerce Solutions</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span class="text-gray-600">CMS Integration</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                        Apprendre encore plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-b-4 hover:border-pink-500">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Mobile App Development</h3>
+                    <p class="text-gray-600 mb-6">
+                       Applications mobiles natives et multiplateformes qui engagent les utilisateurs et stimulent la croissance de l'entreprise.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pink-500 mr-2"></i>
+                            <span class="text-gray-600">iOS & Android</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pink-500 mr-2"></i>
+                            <span class="text-gray-600">UI/UX Design</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pink-500 mr-2"></i>
+                            <span class="text-gray-600">App Maintenance</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-pink-600 font-medium hover:text-pink-800 inline-flex items-center">
+                        Apprendre encore plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-b-4 hover:border-green-500">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bullhorn text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Digital Marketing</h3>
+                    <p class="text-gray-600 mb-6">
+                        Stratégies marketing basées sur les données pour augmenter votre visibilité en ligne et l'engagement de vos clients.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600">SEO & SEM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600">Réseaux sociaux</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600">Stratégie de contenu</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-green-600 font-medium hover:text-green-800 inline-flex items-center">
+                        Apprendre encore plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-b-4 hover:border-indigo-500">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">IT Consulting</h3>
+                    <p class="text-gray-600 mb-6">
+                        Des conseils d’experts pour aligner votre stratégie technologique sur les objectifs commerciaux pour un impact maximal.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">Feuilles de route technologiques</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">Solutions Cloud</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                            <span class="text-gray-600">Audits de sécurité</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-indigo-600 font-medium hover:text-indigo-800 inline-flex items-center">
+                      Apprendre encore plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+    <!-- Why Choose Us Section -->
+    <section class="bg-white py-20 px-6" id="why">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+        <!-- Left Side: Main Image + Floating People -->
+        <div class="relative w-full flex justify-center">
+        <img src="images/why-choose-img-1.png" alt="Top Left" class="absolute top-0 left-0 w-16 h-16 rounded-full object-cover border-4 border-white shadow-md" />
+        <img src="images/why-choose-img-2.png" alt="Top Right" class="absolute top-0 right-0 w-16 h-16 rounded-full object-cover border-4 border-white shadow-md" />
+        <img src="images/why-choose-img-3.png" alt="Middle Left" class="absolute top-1/2 left-4 transform -translate-y-1/2 w-16 h-16 rounded-full object-cover border-4 border-white shadow-md" />
+        <img src="images/why-choose-img-4.png" alt="Middle Right" class="absolute top-1/2 right-4 transform -translate-y-1/2 w-16 h-16 rounded-full object-cover border-4 border-white shadow-md" />
+
+        <!-- Main image -->
+        <img src="images/why-choose-us-img.png" alt="Main Agent" class="relative z-10 w-[320px] md:w-[400px]" />
+
+        <!-- Stats box -->
+        <div class="absolute bottom-10 left-10 bg-white px-6 py-4 rounded-lg shadow-xl z-20">
+            <h2 class="text-3xl font-bold text-[#dc14ac]">10K</h2>
+            <p class="text-lg font-medium text-[#333333]">Clients satisfaits</p>
+        </div>
+        </div>
+
+        <!-- Right Side: Text Content -->
+        <div class="w-full">
+        <p class="text-[#0844cc] italic mb-2">Pourquoi nous choisir</p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Pourquoi vous allez nous <span class="gradient-text">Donner la priorité</span>
+        </h2>
+        <p class="text-[#555555] mb-8">
+            Chez ByteConnect, notre mission est de vous offrir des solutions personnalisées, rapides et performantes pour booster votre croissance digitale.
+        </p>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-[#f4f6ff] p-6 rounded-lg border border-[#0844cc]/20">
+            <h3 class="text-[#0844cc] font-semibold mb-2">Service client premium</h3>
+            <p class="text-[#333333] text-sm">Notre équipe reste à votre écoute 24/7 pour vous offrir un support rapide et efficace.</p>
+            </div>
+            <div class="bg-[#f4f6ff] p-6 rounded-lg border border-[#0844cc]/20">
+            <h3 class="text-[#0844cc] font-semibold mb-2">Plan sur mesure</h3>
+            <p class="text-[#333333] text-sm">Nous concevons des stratégies digitales adaptées à vos objectifs et à votre secteur.</p>
+            </div>
+            <div class="bg-[#f4f6ff] p-6 rounded-lg border border-[#0844cc]/20">
+            <h3 class="text-[#0844cc] font-semibold mb-2">Disponibilité 24/7</h3>
+            <p class="text-[#333333] text-sm">Nos experts sont joignables à tout moment pour répondre à vos besoins urgents.</p>
+            </div>
+            <div class="bg-[#f4f6ff] p-6 rounded-lg border border-[#0844cc]/20">
+            <h3 class="text-[#0844cc] font-semibold mb-2">Économisez temps & argent</h3>
+            <p class="text-[#333333] text-sm">Optimisez vos ressources avec des solutions efficaces et à haute valeur ajoutée.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50" id="testimonials">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 mb-4"><span class="gradient-text">Témoignages</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Ne vous fiez pas uniquement à notre parole. Voici ce que nos clients disent de leur collaboration.
+                </p>
+            </div>
+            
+            <div class="relative overflow-hidden">
+                <div id="testimonial-slider" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide min-w-full px-4">
+                        <div class="bg-white p-8 rounded-xl shadow-md">
+                            <div class="flex items-center mb-6">
+                                <div class="flex-shrink-0">
+                                    <img class="h-12 w-12 rounded-full" 
+                                         src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                         alt="Client"
+                                         loading="lazy">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-gray-800">Sarah Johnson</h4>
+                                    <p class="text-gray-600">CEO, MarocShop</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6">
+                                "ByteConnect a transformé notre présence en ligne grâce à leur solution e-commerce. Nos ventes ont augmenté de 150 % en trois mois après le lancement de la nouvelle plateforme. Leur équipe a été professionnelle, réactive et a vraiment compris nos besoins métier."
+                            </p>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide min-w-full px-4">
+                        <div class="bg-white p-8 rounded-xl shadow-md">
+                            <div class="flex items-center mb-6">
+                                <div class="flex-shrink-0">
+                                    <img class="h-12 w-12 rounded-full" 
+                                         src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                         alt="Client"
+                                         loading="lazy">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-gray-800">Ahmed El Fassi</h4>
+                                    <p class="text-gray-600">CTO, TaxiNow</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6">
+                                "L'application mobile développée par ByteConnect a dépassé nos attentes. Leur souci du détail dans le design UI/UX a permis de créer une application que nos chauffeurs et clients adorent utiliser. Le système backend qu'ils ont conçu est robuste et évolutif."
+                            </p>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide min-w-full px-4">
+                        <div class="bg-white p-8 rounded-xl shadow-md">
+                            <div class="flex items-center mb-6">
+                                <div class="flex-shrink-0">
+                                    <img class="h-12 w-12 rounded-full" 
+                                         src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                         alt="Client"
+                                         loading="lazy">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-gray-800">Fatima Zahra</h4>
+                                    <p class="text-gray-600">Marketing Director, Atlas Group</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6">
+                                "L'équipe marketing digital de ByteConnect nous a aidés à élaborer une stratégie complète qui a augmenté nos prospects en ligne de 300 %. Leur approche basée sur les données et leurs campagnes créatives ont apporté des résultats concrets, mois après mois."
+                            </p>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star-half-alt text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button id="testimonial-prev" class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-indigo-900 hover:bg-indigo-100 transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="testimonial-next" class="w-10 h-10 rounded-full bg-indigo-900 shadow-md flex items-center justify-center text-white hover:bg-indigo-800 transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Un Espace de <span class="gradient-text">Confort</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Un espace moderne et accueillant, pensé pour favoriser la créativité, la collaboration et le bien-être de chacun.
+                </p>
+            </div>
+            
+            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+
+                <!-- Image 1 with hover icon and link -->
+                <a href="https://www.instagram.com/yourprofile1" target="_blank" class="relative group overflow-hidden block">
+                <img src="images/unnamed.jpg" alt="Gallery 1" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3zm5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.5a1 1 0 100 2 1 1 0 000-2z"/>
+                    </svg>
+                </div>
+                </a>
+
+                <a href="https://www.instagram.com/yourprofile1" target="_blank" class="relative group overflow-hidden block">
+                <img src="images/unnamed1.jpg" alt="Gallery 1" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3zm5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.5a1 1 0 100 2 1 1 0 000-2z"/>
+                    </svg>
+                </div>
+                </a>
+
+                <a href="https://www.instagram.com/yourprofile1" target="_blank" class="relative group overflow-hidden block">
+                <img src="images/unnamed2.png" alt="Gallery 1" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3zm5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.5a1 1 0 100 2 1 1 0 000-2z"/>
+                    </svg>
+                </div>
+                </a>
+
+                <a href="https://www.instagram.com/yourprofile1" target="_blank" class="relative group overflow-hidden block">
+                <img src="images/unnamed3.png" alt="Gallery 1" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3zm5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.5a1 1 0 100 2 1 1 0 000-2z"/>
+                    </svg>
+                </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Prenez <span class="gradient-text">Contact</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Prêt à démarrer votre projet ? Contactez-nous dès aujourd'hui pour une consultation gratuite.
+                </p>
+            </div>
+            
+            <div class="md:flex md:space-x-8">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <form class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nom et prénom</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Votre nom">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Adresse email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Votre email">
+                        </div>
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Service intéressé par</label>
+                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Select a service</option>
+                                <option value="web">Web Development</option>
+                                <option value="mobile">Mobile App Development</option>
+                                <option value="marketing">Digital Marketing</option>
+                                <option value="consulting">IT Consulting</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Votre message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Parlez-nous de votre projet"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-900 hover:bg-indigo-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                            Envoyer un message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Coordonnées</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Notre bureau</h4>
+                                    <p class="text-gray-600">Plateau 37, immeuble Bureaux Amine 6ème étage, rue de Tarfaya, 50000 VN, Meknès</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Envoyez-nous un e-mail</h4>
+                                    <p class="text-gray-600">recrutement@byteconnect.ma</p>
+                                    <p class="text-gray-600">recrutement@byteconnect.ma</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-pink-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Appelez-nous</h4>
+                                    <p class="text-gray-600">+212 6 12 34 56 78</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Horaires de travail</h4>
+                                    <p class="text-gray-600">Lundi - Vendredi: 9:30 - 19:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Suivez-nous</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.instagram.com/byteconnectma/" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-blue-700 text-white p-3 rounded-full hover:bg-blue-800 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d413.9673626133732!2d-5.546499550256284!3d33.896377689466675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda0459a20194947%3A0xdc24be80533e7a83!2sConnect%20Call!5e0!3m2!1sen!2sma!4v1751749551490!5m2!1sen!2sma"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/212612345678" 
+       class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="mb-8 md:mb-0">
+                    <img src="images/logoByteconnectofficielfichiersvgavecslogan.png" alt="logo"><br>
+                    <p class="text-gray-300 mb-4">
+                        Votre partenaire de confiance pour la transformation numérique et les solutions technologiques.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/byteconnectma/" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-300 hover:text-white">Web Development</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white">Mobile App Development</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white">Digital Marketing</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white">IT Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Entreprise</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-300 hover:text-white">À propos de nous</a></li>
+                        <li><a href="#why" class="text-gray-300 hover:text-white">Pourquoi nous choisir?</a></li>
+                        <li><a href="#testimonials" class="text-gray-300 hover:text-white">Témoignages</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gray-300 mr-2 mt-1"></i>
+                            <span class="text-gray-300">Plateau 37, immeuble Bureaux Amine 6ème étage, rue de Tarfaya, 50000 VN, Meknès</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-gray-300 mr-2"></i>
+                            <span class="text-gray-300">+212 6 12 34 56 78</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-300 mr-2"></i>
+                            <span class="text-gray-300">recrutement@byteconnect.ma</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 mb-4 md:mb-0">
+                    &copy; 2023 ByteConnect. Tous droits réservés.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Testimonial slider
+        const slider = document.getElementById('testimonial-slider');
+        const prevBtn = document.getElementById('testimonial-prev');
+        const nextBtn = document.getElementById('testimonial-next');
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const totalSlides = slides.length;
+        
+        function goToSlide(n) {
+            currentSlide = (n + totalSlides) % totalSlides;
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+        
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        // Auto slide every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+            navbar.classList.add("bg-white", "shadow-md");
+            navbar.classList.remove("bg-transparent");
+            } else {
+            navbar.classList.remove("bg-white", "shadow-md");
+            navbar.classList.add("bg-transparent");
+            }
+        });
+
+    </script>
+</body>
+</html>
